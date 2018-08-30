@@ -9,11 +9,9 @@ import { Http, Headers, RequestOptions } from '../../../node_modules/@angular/ht
 export class ListPage {
   selectedItem: any;
   icons: string[];
-  
-  //private url : string = 'https://beer.symfonycasts.com.br/v1';
-  
-  private url : string = 'http://localhost:3030/v1';
+  items: Array<{title: string, note: string, icon: string}>;
 
+  private url : string = 'http://localhost:3030/v1';
   public beer = {name: "", type: "", price: "", mark: "", img: ""};
 
   constructor(public navCtrl: NavController,
@@ -21,7 +19,7 @@ export class ListPage {
               public navParams: NavParams,
               public http: Http
             ) {
-    
+              
   }
 
   saveBeer(beer) {
@@ -35,7 +33,7 @@ export class ListPage {
       .subscribe(data => {
           let toast = this.toastCtrl.create({
             message: 'Produto cadastrado com sucesso !',
-            duration: 3000
+            duration: 4000
           });
           toast.present();
       });
