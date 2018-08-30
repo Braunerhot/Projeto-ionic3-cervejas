@@ -9,8 +9,12 @@ import { Http, Headers, RequestOptions } from '../../../node_modules/@angular/ht
 export class ListPage {
   selectedItem: any;
   icons: string[];
-  private url : string = 'https://beer.symfonycasts.com.br/v1';
-  public beer = {name: "", type: "", price: ""};
+  
+  //private url : string = 'https://beer.symfonycasts.com.br/v1';
+  
+  private url : string = 'http://localhost:3030/v1';
+
+  public beer = {name: "", type: "", price: "", mark: "", img: ""};
 
   constructor(public navCtrl: NavController,
               public toastCtrl: ToastController,

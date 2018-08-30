@@ -11,8 +11,9 @@ import { TestPage } from '../test/test';
 })
 export class HomePage {
 
-  private url:string = 'https://beer.symfonycasts.com.br/v1';
+  //private url:string = 'https://beer.symfonycasts.com.br/v1';
   
+  private url:string = 'http://localhost:3030/v1';
   public beers: Array<{}>;
 
   constructor(

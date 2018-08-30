@@ -9,18 +9,22 @@
 
 <ion-content padding>
   <ion-item>
-    <ion-label floating>Nome: </ion-label>
+    <ion-label floating>Nome </ion-label>
     <ion-input type="text" [(ngModel)]="beer.name" ></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Tipo: </ion-label>
+    <ion-label floating>Preço </ion-label>
+    <ion-input type="text" [(ngModel)]="beer.price" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Tipo </ion-label>
     <ion-input type="text" [(ngModel)]="beer.type" ></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label floating>Preço: </ion-label>
-    <ion-input type="text" [(ngModel)]="beer.price" ></ion-input>
+    <ion-label floating>Marca </ion-label>
+    <ion-input type="text" [(ngModel)]="beer.mark" ></ion-input>
   </ion-item>
-  <p padding>
+  <p>
     <button ion-button full (click)="saveBeer(beer)" >Salvar</button>
   </p>  
 
